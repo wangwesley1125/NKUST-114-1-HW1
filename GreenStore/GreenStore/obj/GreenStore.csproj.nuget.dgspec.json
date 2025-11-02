@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\reno0\\OneDrive\\Desktop\\GreenStore\\GreenStore\\GreenStore.csproj": {}
+    "D:\\軟體工程\\GreenStore\\GreenStore\\GreenStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\reno0\\OneDrive\\Desktop\\GreenStore\\GreenStore\\GreenStore.csproj": {
+    "D:\\軟體工程\\GreenStore\\GreenStore\\GreenStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\reno0\\OneDrive\\Desktop\\GreenStore\\GreenStore\\GreenStore.csproj",
+        "projectUniqueName": "D:\\軟體工程\\GreenStore\\GreenStore\\GreenStore.csproj",
         "projectName": "GreenStore",
-        "projectPath": "C:\\Users\\reno0\\OneDrive\\Desktop\\GreenStore\\GreenStore\\GreenStore.csproj",
+        "projectPath": "D:\\軟體工程\\GreenStore\\GreenStore\\GreenStore.csproj",
         "packagesPath": "C:\\Users\\reno0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\reno0\\OneDrive\\Desktop\\GreenStore\\GreenStore\\obj\\",
+        "outputPath": "D:\\軟體工程\\GreenStore\\GreenStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
