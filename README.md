@@ -10,7 +10,6 @@ App 採用 Swift 的 Codable 機制進行 JSON 解碼，
 此外，App 支援資料篩選、排序與基本錯誤處理，展示政府開放資料在行動端的應用情境。
 
 ## Demo（目前進度）
-## Demo
 <div align="center">
   <img src="Docs/demo.gif" width="300" alt="綠生活・綠色商店 App Demo">
 </div>
