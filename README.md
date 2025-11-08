@@ -1,7 +1,7 @@
 ## 專案說明
 本專案為 SwiftUI 開發的 iOS App，
 用於讀取並解析政府開放資料集「綠生活_綠色商店」JSON 檔案，
-並將綠色商店 以地圖標記（Map Annotation）方式顯示其所在位置。
+並將台中市的綠色商店以地圖標記（Map Annotation）方式顯示其所在位置。
 
 App 採用 Swift 的 Codable 機制進行 JSON 解碼，
 並結合 MapKit（或 SwiftUI Map）將商店位置呈現在互動地圖上，
