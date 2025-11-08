@@ -11,7 +11,7 @@ App 採用 Swift 的 Codable 機制進行 JSON 解碼，
 
 ## Demo（目前進度）
 <div align="center">
-  <img src="Docs/demo.gif" width="300" alt="綠生活・綠色商店 App Demo">
+  <img src="Docs/demo.gif" width="200" alt="綠生活・綠色商店 App Demo">
 </div>
 
 ## 授權
