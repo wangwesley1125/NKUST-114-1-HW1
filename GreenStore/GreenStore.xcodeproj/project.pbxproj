@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		9697A6A42EBF4A14005ECDCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9697A68E2EBF4A11005ECDCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9697A6952EBF4A11005ECDCD;
+			remoteInfo = GreenStore;
+		};
+		9697A6AE2EBF4A14005ECDCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9697A68E2EBF4A11005ECDCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9697A6952EBF4A11005ECDCD;
+			remoteInfo = GreenStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9697A6962EBF4A11005ECDCD /* GreenStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9697A6A32EBF4A14005ECDCD /* GreenStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9697A6AD2EBF4A14005ECDCD /* GreenStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9697A6982EBF4A11005ECDCD /* GreenStore */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GreenStore;
+			sourceTree = "<group>";
+		};
+		9697A6A62EBF4A14005ECDCD /* GreenStoreTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GreenStoreTests;
+			sourceTree = "<group>";
+		};
+		9697A6B02EBF4A14005ECDCD /* GreenStoreUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GreenStoreUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9697A6932EBF4A11005ECDCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9697A6A02EBF4A14005ECDCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9697A6AA2EBF4A14005ECDCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9697A68D2EBF4A11005ECDCD = {
+			isa = PBXGroup;
+			children = (
+				9697A6982EBF4A11005ECDCD /* GreenStore */,
+				9697A6A62EBF4A14005ECDCD /* GreenStoreTests */,
+				9697A6B02EBF4A14005ECDCD /* GreenStoreUITests */,
+				9697A6972EBF4A11005ECDCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9697A6972EBF4A11005ECDCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9697A6962EBF4A11005ECDCD /* GreenStore.app */,
+				9697A6A32EBF4A14005ECDCD /* GreenStoreTests.xctest */,
+				9697A6AD2EBF4A14005ECDCD /* GreenStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9697A6952EBF4A11005ECDCD /* GreenStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9697A6B72EBF4A14005ECDCD /* Build configuration list for PBXNativeTarget "GreenStore" */;
+			buildPhases = (
+				9697A6922EBF4A11005ECDCD /* Sources */,
+				9697A6932EBF4A11005ECDCD /* Frameworks */,
+				9697A6942EBF4A11005ECDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9697A6982EBF4A11005ECDCD /* GreenStore */,
+			);
+			name = GreenStore;
+			packageProductDependencies = (
+			);
+			productName = GreenStore;
+			productReference = 9697A6962EBF4A11005ECDCD /* GreenStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9697A6A22EBF4A14005ECDCD /* GreenStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9697A6BA2EBF4A14005ECDCD /* Build configuration list for PBXNativeTarget "GreenStoreTests" */;
+			buildPhases = (
+				9697A69F2EBF4A14005ECDCD /* Sources */,
+				9697A6A02EBF4A14005ECDCD /* Frameworks */,
+				9697A6A12EBF4A14005ECDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9697A6A52EBF4A14005ECDCD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9697A6A62EBF4A14005ECDCD /* GreenStoreTests */,
+			);
+			name = GreenStoreTests;
+			packageProductDependencies = (
+			);
+			productName = GreenStoreTests;
+			productReference = 9697A6A32EBF4A14005ECDCD /* GreenStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9697A6AC2EBF4A14005ECDCD /* GreenStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9697A6BD2EBF4A14005ECDCD /* Build configuration list for PBXNativeTarget "GreenStoreUITests" */;
+			buildPhases = (
+				9697A6A92EBF4A14005ECDCD /* Sources */,
+				9697A6AA2EBF4A14005ECDCD /* Frameworks */,
+				9697A6AB2EBF4A14005ECDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9697A6AF2EBF4A14005ECDCD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9697A6B02EBF4A14005ECDCD /* GreenStoreUITests */,
+			);
+			name = GreenStoreUITests;
+			packageProductDependencies = (
+			);
+			productName = GreenStoreUITests;
+			productReference = 9697A6AD2EBF4A14005ECDCD /* GreenStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9697A68E2EBF4A11005ECDCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					9697A6952EBF4A11005ECDCD = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					9697A6A22EBF4A14005ECDCD = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9697A6952EBF4A11005ECDCD;
+					};
+					9697A6AC2EBF4A14005ECDCD = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9697A6952EBF4A11005ECDCD;
+					};
+				};
+			};
+			buildConfigurationList = 9697A6912EBF4A11005ECDCD /* Build configuration list for PBXProject "GreenStore" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9697A68D2EBF4A11005ECDCD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9697A6972EBF4A11005ECDCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9697A6952EBF4A11005ECDCD /* GreenStore */,
+				9697A6A22EBF4A14005ECDCD /* GreenStoreTests */,
+				9697A6AC2EBF4A14005ECDCD /* GreenStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9697A6942EBF4A11005ECDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9697A6A12EBF4A14005ECDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9697A6AB2EBF4A14005ECDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9697A6922EBF4A11005ECDCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9697A69F2EBF4A14005ECDCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9697A6A92EBF4A14005ECDCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9697A6A52EBF4A14005ECDCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9697A6952EBF4A11005ECDCD /* GreenStore */;
+			targetProxy = 9697A6A42EBF4A14005ECDCD /* PBXContainerItemProxy */;
+		};
+		9697A6AF2EBF4A14005ECDCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9697A6952EBF4A11005ECDCD /* GreenStore */;
+			targetProxy = 9697A6AE2EBF4A14005ECDCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9697A6B52EBF4A14005ECDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9697A6B62EBF4A14005ECDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9697A6B82EBF4A14005ECDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesleywang.GreenStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9697A6B92EBF4A14005ECDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesleywang.GreenStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9697A6BB2EBF4A14005ECDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesleywang.GreenStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GreenStore";
+			};
+			name = Debug;
+		};
+		9697A6BC2EBF4A14005ECDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesleywang.GreenStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GreenStore";
+			};
+			name = Release;
+		};
+		9697A6BE2EBF4A14005ECDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesleywang.GreenStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreenStore;
+			};
+			name = Debug;
+		};
+		9697A6BF2EBF4A14005ECDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32M3HGS7LU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesleywang.GreenStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreenStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9697A6912EBF4A11005ECDCD /* Build configuration list for PBXProject "GreenStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9697A6B52EBF4A14005ECDCD /* Debug */,
+				9697A6B62EBF4A14005ECDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9697A6B72EBF4A14005ECDCD /* Build configuration list for PBXNativeTarget "GreenStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9697A6B82EBF4A14005ECDCD /* Debug */,
+				9697A6B92EBF4A14005ECDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9697A6BA2EBF4A14005ECDCD /* Build configuration list for PBXNativeTarget "GreenStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9697A6BB2EBF4A14005ECDCD /* Debug */,
+				9697A6BC2EBF4A14005ECDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9697A6BD2EBF4A14005ECDCD /* Build configuration list for PBXNativeTarget "GreenStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9697A6BE2EBF4A14005ECDCD /* Debug */,
+				9697A6BF2EBF4A14005ECDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9697A68E2EBF4A11005ECDCD /* Project object */;
+}
