@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  GreenStore
 //
-//  Created by 王耀偉 on 2025/11/8.
+//  Created by Wesley on 2025/11/8.
 //
 
 import SwiftUI
