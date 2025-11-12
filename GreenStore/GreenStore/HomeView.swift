@@ -9,13 +9,18 @@ import SwiftUI
 import MapKit
 
 struct HomeView: View {
-    
-    let cameraPosition: MapCameraPosition = .region(.init(center: .init(latitude: 22.654523735389255, longitude: 120.32997267412121), latitudinalMeters: 130, longitudinalMeters: 130))
+    // 以台中市政府為中心
+    @State private var cameraPosition: MapCameraPosition = .region(
+        .init(center: .init(latitude: 24.16304671963227,
+                            longitude: 120.64669143694526),
+              latitudinalMeters: 1300,
+              longitudinalMeters: 1300)
+    )
     
     let locationManager = CLLocationManager()
     
     var body: some View {
-        Map(initialPosition: cameraPosition) {
+        Map(position: $cameraPosition) {
             UserAnnotation()
         }
 //        .onAppear {
