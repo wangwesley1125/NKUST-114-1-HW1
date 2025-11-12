@@ -15,8 +15,8 @@ struct Store: Codable, Identifiable {
     var store_name: String?
     var address: String?
     var phone: String?
-    var latitude: Double?
-    var longitude: Double?
+    var latitude: Double
+    var longitude: Double
     var city: String?
 }
 
@@ -27,13 +27,13 @@ struct ConnectApiView: View {
         NavigationStack {
             List(stores, id: \.id) { store in
                 VStack(alignment: .leading) {
+                    Text("\(store.id)")
+                        .font(.headline)
                     Text(store.store_name ?? "無店名")
                         .font(.headline)
                     Text(store.address ?? "無地址")
                         .font(.body)
-                    Text(store.phone ?? "無電話")
-                        .font(.body)
-                    Text(store.city ?? "無城市")
+                    Text("經度:\(store.longitude), 緯度:\(store.latitude)")
                         .font(.body)
                 }
             }
