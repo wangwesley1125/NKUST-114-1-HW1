@@ -17,11 +17,40 @@ struct HomeView: View {
     
     @State private var useSimulatedLocation = true
     
+    // Show Bottom Sheet
+    @State private var showingBottomSheet = false
+    
     var body: some View {
         Map(initialPosition: cameraPosition) {
             
             // 自定義 Marker
-            Annotation("綠色商店 1", coordinate: .greenStore1, anchor: .center) {
+            Annotation("7-11第一廣場門市", coordinate: .greenStore1, anchor: .center) {
+                Button {
+                    showingBottomSheet.toggle()
+                } label: {
+                    Image(systemName: "leaf.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundStyle(.white)
+                        .frame(width: 20, height: 20)
+                        .padding(7)
+                        .background(.green.gradient, in: .circle)
+                }
+                .sheet(isPresented: $showingBottomSheet) {
+                    StoreDetailSheet()
+                        .presentationDetents([.height(200)])
+                        .presentationDragIndicator(.visible)
+                }
+//                Image(systemName: "leaf.fill")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .foregroundStyle(.white)
+//                    .frame(width: 20, height: 20)
+//                    .padding(7)
+//                    .background(.green.gradient, in: .circle)
+            }
+            
+            Annotation("7-11鑫華新門市", coordinate: .greenStore2, anchor: .center) {
                 Image(systemName: "leaf.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -31,17 +60,7 @@ struct HomeView: View {
                     .background(.green.gradient, in: .circle)
             }
             
-            Annotation("綠色商店 2", coordinate: .greenStore2, anchor: .center) {
-                Image(systemName: "leaf.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.white)
-                    .frame(width: 20, height: 20)
-                    .padding(7)
-                    .background(.green.gradient, in: .circle)
-            }
-            
-            Annotation("綠色商店 3", coordinate: .greenStore3, anchor: .center) {
+            Annotation("7-11錦花門市", coordinate: .greenStore3, anchor: .center) {
                 Image(systemName: "leaf.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
