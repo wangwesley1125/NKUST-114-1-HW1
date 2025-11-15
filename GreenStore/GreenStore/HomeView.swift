@@ -8,66 +8,58 @@
 import SwiftUI
 import MapKit // longtitude:經度 latitude:緯度
 
+struct GreenStore: Identifiable {
+    let id = UUID()
+    let name: String
+    let phone: String
+    let address: String
+    let coordinate: CLLocationCoordinate2D
+}
+
 struct HomeView: View {
     
     // 以台中市政府為中心 latitude: 24.16167, longitude: 120.64684
     let cameraPosition: MapCameraPosition = .region(.init(center: .init(latitude: 24.16167, longitude: 120.64684), latitudinalMeters: 13000, longitudinalMeters: 13000))
     
+    // 取得使用者所在位置
     let locationManager = CLLocationManager()
     
+    // 環視圖
+    @State private var lookAroundScene: MKLookAroundScene?
+    @State private var isShowingLookAround = false
+    
+    // 模擬使用者所在位置
     @State private var useSimulatedLocation = true
     
-    // Show Bottom Sheet
-    @State private var showingBottomSheet = false
+    // 選擇哪個商店
+    @State private var selectedStore: GreenStore?
+    
+    let stores = [
+        GreenStore(name: "7-11第一廣場門市", phone: "02-27478711", address: "400台中市中區中正路36號", coordinate: .greenStore1),
+        GreenStore(name: "7-11鑫華新門市", phone: "02-27478711", address: "400台中市中區中華里中華路一段75.77號;民族路218號", coordinate: .greenStore2),
+        GreenStore(name: "7-11錦花門市", phone: "02-27478711", address: "400台中市中區光復路127號", coordinate: .greenStore3)
+    ]
     
     var body: some View {
         Map(initialPosition: cameraPosition) {
             
-            // 自定義 Marker
-            Annotation("7-11第一廣場門市", coordinate: .greenStore1, anchor: .center) {
-                Button {
-                    showingBottomSheet.toggle()
-                } label: {
-                    Image(systemName: "leaf.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundStyle(.white)
-                        .frame(width: 20, height: 20)
-                        .padding(7)
-                        .background(.green.gradient, in: .circle)
+            ForEach(stores) { store in
+                Annotation(store.name, coordinate: store.coordinate, anchor: .center) {
+                    Button {
+                        Task {
+                            lookAroundScene = await getLookAroundScene(from: store.coordinate)
+                            selectedStore = store
+                        }
+                    } label: {
+                        Image(systemName: "leaf.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundStyle(.white)
+                            .frame(width: 20, height: 20)
+                            .padding(7)
+                            .background(.green.gradient, in: .circle)
+                    }
                 }
-                .sheet(isPresented: $showingBottomSheet) {
-                    StoreDetailSheet()
-                        .presentationDetents([.height(200)])
-                        .presentationDragIndicator(.visible)
-                }
-//                Image(systemName: "leaf.fill")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .foregroundStyle(.white)
-//                    .frame(width: 20, height: 20)
-//                    .padding(7)
-//                    .background(.green.gradient, in: .circle)
-            }
-            
-            Annotation("7-11鑫華新門市", coordinate: .greenStore2, anchor: .center) {
-                Image(systemName: "leaf.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.white)
-                    .frame(width: 20, height: 20)
-                    .padding(7)
-                    .background(.green.gradient, in: .circle)
-            }
-            
-            Annotation("7-11錦花門市", coordinate: .greenStore3, anchor: .center) {
-                Image(systemName: "leaf.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.white)
-                    .frame(width: 20, height: 20)
-                    .padding(7)
-                    .background(.green.gradient, in: .circle)
             }
             
             // 模擬使用者所在的位置，否則用使用者的真實位置
@@ -85,8 +77,26 @@ struct HomeView: View {
                 UserAnnotation()
             }
         }
+        .mapStyle(.standard(pointsOfInterest: .excludingAll))
+        .preferredColorScheme(.dark)
+        .lookAroundViewer(isPresented: $isShowingLookAround, initialScene: lookAroundScene)
+        .sheet(item: $selectedStore) { store in
+            StoreDetailSheet(store: store, lookAroundScene: lookAroundScene)
+                .presentationDetents([.medium])
+                .presentationDragIndicator(.visible)
+        }
         .onAppear {
             locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    // 環視圖 Function
+    func getLookAroundScene(from coordinate: CLLocationCoordinate2D) async -> MKLookAroundScene? {
+        do {
+            return try await MKLookAroundSceneRequest(coordinate: coordinate).scene
+        } catch {
+            print("Cannot retrieve Look Around scenes: \(error.localizedDescription)")
+            return nil
         }
     }
     
@@ -96,7 +106,7 @@ struct HomeView: View {
     HomeView()
 }
 
-// 測資
+// 測資的經緯度
 extension CLLocationCoordinate2D {
     static let greenStore1 = CLLocationCoordinate2D(latitude: 24.2577969, longitude: 120.657518)
     static let greenStore2 = CLLocationCoordinate2D(latitude: 24.1438744, longitude: 120.6750245)
