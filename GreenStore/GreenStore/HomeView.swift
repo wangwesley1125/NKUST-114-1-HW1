@@ -26,10 +26,15 @@ struct HomeView: View {
     
     // 環視圖
     @State private var lookAroundScene: MKLookAroundScene?
+    
     @State private var isShowingLookAround = false
     
-    // 模擬使用者所在位置
+    // 模擬使用者所在位置，現在 true 是為了模擬，但當要使用真正的位置再改成 false
     @State private var useSimulatedLocation = true
+    
+    let simulatedUserLocation = CLLocationCoordinate2D(latitude: 24.16167, longitude: 120.64684)
+    
+    @State private var route: MKRoute?
     
     // 選擇哪個商店
     @State private var selectedStore: GreenStore?
@@ -64,7 +69,7 @@ struct HomeView: View {
             
             // 模擬使用者所在的位置，否則用使用者的真實位置
             if useSimulatedLocation {
-                Annotation("我的位置", coordinate: .init(latitude: 24.16167, longitude: 120.64684)) {
+                Annotation("我的位置", coordinate: simulatedUserLocation) {
                     Image(systemName: "person.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -76,13 +81,24 @@ struct HomeView: View {
             } else {
                 UserAnnotation()
             }
+            
+            if let route {
+                MapPolyline(route)
+                    .stroke(Color.green, lineWidth: 4)
+            }
+            
         }
         .mapStyle(.standard(pointsOfInterest: .excludingAll))
         .preferredColorScheme(.dark)
         .lookAroundViewer(isPresented: $isShowingLookAround, initialScene: lookAroundScene)
         .sheet(item: $selectedStore) { store in
-            StoreDetailSheet(store: store, lookAroundScene: lookAroundScene)
-                .presentationDetents([.medium])
+            StoreDetailSheet(store: store,
+                             lookAroundScene: lookAroundScene,
+                             onGetDirections: { destination in
+                                         getDirections(to: destination)
+                                         selectedStore = nil // 關閉 sheet
+                                     })
+                .presentationDetents([.height(510)])
                 .presentationDragIndicator(.visible)
         }
         .onAppear {
@@ -100,6 +116,40 @@ struct HomeView: View {
         }
     }
     
+    func getUserLocation() async -> CLLocationCoordinate2D? {
+        let updates = CLLocationUpdate.liveUpdates()
+        
+        do {
+            let update = try await updates.first { $0.location?.coordinate != nil}
+            return update?.location?.coordinate
+        } catch {
+            print("Cannot get user location")
+            return nil
+        }
+    }
+    
+    func getDirections(to destination: CLLocationCoordinate2D) {
+        Task {
+            
+            let userLocation = useSimulatedLocation ? simulatedUserLocation : await getUserLocation()
+            
+            guard let userLocation = userLocation else { return }
+            
+            let request = MKDirections.Request()
+            request.source = MKMapItem(placemark: .init(coordinate: userLocation))
+            request.destination = MKMapItem(placemark: .init(coordinate: destination))
+            
+            // 走路：.walking 開車：.automobile 大眾運輸：.transit 任意（讓系統自動選擇）：.any（系統會根據距離自動選擇最適合的方式）
+            request.transportType = .any
+            
+            do {
+                let directions = try await MKDirections(request: request).calculate()
+                route = directions.routes.first
+            } catch {
+               print("Show error")
+            }
+        }
+    }
 }
 
 #Preview {

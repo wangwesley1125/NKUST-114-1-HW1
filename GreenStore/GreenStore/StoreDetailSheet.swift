@@ -14,8 +14,10 @@ struct StoreDetailSheet: View {
     
     let lookAroundScene: MKLookAroundScene?
     
+    let onGetDirections: (CLLocationCoordinate2D) -> Void
+    
     var body: some View {
-        Form {
+        ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
                     Text(store.name)
@@ -38,7 +40,7 @@ struct StoreDetailSheet: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             
-            //.frame(maxWidth: .infinity, alignment: .leading)
+            // 環視圖
             if let scene = lookAroundScene {
                 LookAroundPreview(initialScene: scene)
                     .frame(height: 300)
@@ -56,9 +58,27 @@ struct StoreDetailSheet: View {
                 .frame(height: 200)
                 .frame(maxWidth: .infinity)
             }
+            
+            // 取得路線按鈕
+            Button {
+                onGetDirections(store.coordinate)
+            } label: {
+                HStack {
+                    Image(systemName: "arrow.triangle.turn.up.right.circle.fill")
+                    Text("取得路線")
+                        .fontWeight(.semibold)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.green)
+                .foregroundStyle(.white)
+                .cornerRadius(12)
+            }
+            .padding()
         }
         
     }
+    
 }
 
 #Preview {
@@ -67,6 +87,6 @@ struct StoreDetailSheet: View {
         phone: "04-2222-3333",
         address: "台中市中區綠川西街135號",
         coordinate: .greenStore1
-    ), lookAroundScene: nil
+    ), lookAroundScene: nil, onGetDirections: { _ in }
     )
 }
