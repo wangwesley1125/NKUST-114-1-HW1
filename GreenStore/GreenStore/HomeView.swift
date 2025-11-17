@@ -98,7 +98,7 @@ struct HomeView: View {
                                          getDirections(to: destination)
                                          selectedStore = nil // 關閉 sheet
                                      })
-                .presentationDetents([.height(510)])
+                .presentationDetents([.height(520)])
                 .presentationDragIndicator(.visible)
         }
         .onAppear {

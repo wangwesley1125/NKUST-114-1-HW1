@@ -9,7 +9,16 @@ import SwiftUI
 
 struct LikeView: View {
     var body: some View {
-        Text("This is LikeView.")
+        NavigationStack {
+            VStack {
+                Text("目前沒收藏商店")
+                    .foregroundColor(.gray)
+                    .font(.title)
+            }
+            
+            .navigationTitle("收藏")
+        }
+        
     }
 }
 

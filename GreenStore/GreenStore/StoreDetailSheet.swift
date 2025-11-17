@@ -20,9 +20,32 @@ struct StoreDetailSheet: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
+                    Image(systemName: "storefront.fill")
+                        .foregroundStyle(.green)
+                        .font(.system(size:25))
+                    
                     Text(store.name)
                         .font(.title2)
                         .fontWeight(.bold)
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(.green)
+                            .frame(width: 90, height: 30)
+                        
+                        Text("# 綠色商店")
+                            .foregroundColor(.black)
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "heart.fill")
+                            .foregroundStyle(.green)
+                            .font(.system(size:25))
+                    }
                 }
                 
                 HStack {
@@ -65,9 +88,12 @@ struct StoreDetailSheet: View {
             } label: {
                 HStack {
                     Image(systemName: "arrow.triangle.turn.up.right.circle.fill")
+                        .foregroundColor(.black)
                     Text("取得路線")
                         .fontWeight(.semibold)
+                        .foregroundColor(.black)
                 }
+                .font(.title2)
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(.green)
