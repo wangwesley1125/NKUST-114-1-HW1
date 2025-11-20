@@ -16,6 +16,12 @@ struct StoreDetailSheet: View {
     
     let onGetDirections: (CLLocationCoordinate2D) -> Void
     
+    // @State private var isLiked = false
+    
+    let isLiked: Bool
+    
+    let onToggleLike: () -> Void
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -40,11 +46,12 @@ struct StoreDetailSheet: View {
                     Spacer()
                     
                     Button {
-                        
+                        onToggleLike()
                     } label: {
-                        Image(systemName: "heart.fill")
-                            .foregroundStyle(.green)
-                            .font(.system(size:25))
+                        ZStack {
+                            likedButtonAnimation(Image(systemName: "heart.fill"), show: isLiked)
+                            likedButtonAnimation(Image(systemName: "heart"), show: !isLiked)
+                        }
                     }
                 }
                 
@@ -102,17 +109,29 @@ struct StoreDetailSheet: View {
             }
             .padding()
         }
-        
     }
     
+    func likedButtonAnimation(_ image: Image, show: Bool) -> some View{
+        image
+            .tint(isLiked ? .pink : .gray)
+            .font(.system(size:30))
+            .scaleEffect(show ? 1 : 0)
+            .opacity(show ? 1 : 0)
+            .animation(.interpolatingSpring(stiffness: 170, damping: 15), value: show)
+    }
 }
 
 #Preview {
-    StoreDetailSheet(store: GreenStore(
-        name: "7-11第一廣場門市",
-        phone: "04-2222-3333",
-        address: "台中市中區綠川西街135號",
-        coordinate: .greenStore1
-    ), lookAroundScene: nil, onGetDirections: { _ in }
+    StoreDetailSheet(
+        store: GreenStore(
+            name: "7-11第一廣場門市",
+            phone: "04-2222-3333",
+            address: "台中市中區綠川西街135號",
+            coordinate: .greenStore1
+        ),
+        lookAroundScene: nil,
+        onGetDirections: { _ in },
+        isLiked: false,
+        onToggleLike: {}
     )
 }

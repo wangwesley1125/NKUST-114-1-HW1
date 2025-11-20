@@ -39,6 +39,9 @@ struct HomeView: View {
     // 選擇哪個商店
     @State private var selectedStore: GreenStore?
     
+    // 儲存喜歡的商店 ID
+    @State private var likedStoreIDs: Set<UUID> = []
+    
     let stores = [
         GreenStore(name: "7-11第一廣場門市", phone: "02-27478711", address: "400台中市中區中正路36號", coordinate: .greenStore1),
         GreenStore(name: "7-11鑫華新門市", phone: "02-27478711", address: "400台中市中區中華里中華路一段75.77號;民族路218號", coordinate: .greenStore2),
@@ -50,20 +53,36 @@ struct HomeView: View {
             
             ForEach(stores) { store in
                 Annotation(store.name, coordinate: store.coordinate, anchor: .center) {
-                    Button {
-                        Task {
-                            lookAroundScene = await getLookAroundScene(from: store.coordinate)
-                            selectedStore = store
+                    ZStack {
+                        Button {
+                            Task {
+                                lookAroundScene = await getLookAroundScene(from: store.coordinate)
+                                selectedStore = store
+                            }
+                        } label: {
+                            Image(systemName: "leaf.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundStyle(.white)
+                                .frame(width: 20, height: 20)
+                                .padding(7)
+                                .background(likedStoreIDs.contains(store.id) ? .pink : .green, in: .circle)
                         }
-                    } label: {
-                        Image(systemName: "leaf.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundStyle(.white)
-                            .frame(width: 20, height: 20)
-                            .padding(7)
-                            .background(.green.gradient, in: .circle)
+                        
+                        if likedStoreIDs.contains(store.id) {
+                            Image(systemName: "heart.fill")
+                                .foregroundStyle(.pink)
+                                .font(.system(size: 16))
+                                .background(
+                                    Image(systemName: "heart.fill")
+                                        .foregroundStyle(.black)
+                                        .font(.system(size: 20))
+                                )
+                                .offset(x: 11, y: 12)
+                                .transition(.scale.combined(with: .opacity))
+                        }
                     }
+                    .animation(.spring(response: 0.4, dampingFraction: 0.6), value: likedStoreIDs)
                 }
             }
             
@@ -97,7 +116,15 @@ struct HomeView: View {
                              onGetDirections: { destination in
                                          getDirections(to: destination)
                                          selectedStore = nil // 關閉 sheet
-                                     })
+                                     },
+                             isLiked: likedStoreIDs.contains(store.id),
+                             onToggleLike: {
+                                 if likedStoreIDs.contains(store.id) {
+                                     likedStoreIDs.remove(store.id)
+                                 } else {
+                                     likedStoreIDs.insert(store.id)
+                                 }
+                             })
                 .presentationDetents([.height(520)])
                 .presentationDragIndicator(.visible)
         }
