@@ -25,6 +25,10 @@ App 採用 Swift 的 Codable 機制進行 JSON 解碼，
         <img src="Docs/showDirections.gif" width="200" alt="顯示路線功能"><br>
         <b>顯示使用者到綠色商店的路線</b>
       </td>
+      <td align="center" style="padding: 0 20px;">
+        <img src="Docs/likeButtonFunc.gif" width="200" alt="顯示路線功能"><br>
+        <b>顯示使用者喜愛的商店</b>
+      </td>
     </tr>
   </table>
 </div>
