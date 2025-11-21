@@ -124,10 +124,13 @@ struct StoreDetailSheet: View {
 #Preview {
     StoreDetailSheet(
         store: GreenStore(
+            id: 1,
             name: "7-11第一廣場門市",
             phone: "04-2222-3333",
             address: "台中市中區綠川西街135號",
-            coordinate: .greenStore1
+            //coordinate: .greenStore1
+            longitude: 120.657518,
+            latitude: 24.2577969
         ),
         lookAroundScene: nil,
         onGetDirections: { _ in },
