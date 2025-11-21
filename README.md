@@ -9,7 +9,7 @@ App 採用 Swift 的 Codable 機制進行 JSON 解碼，
 
 此外，App 支援資料篩選、排序與基本錯誤處理，展示政府開放資料在行動端的應用情境。
 
-## 功能展示
+## 小功能展示
 <div align="center">
   <table>
     <tr>
@@ -26,11 +26,18 @@ App 採用 Swift 的 Codable 機制進行 JSON 解碼，
         <b>顯示使用者到綠色商店的路線</b>
       </td>
       <td align="center" style="padding: 0 20px;">
-        <img src="Docs/likeButtonFunc.gif" width="200" alt="顯示路線功能"><br>
+        <img src="Docs/likeButtonFunc.gif" width="200" alt="顯示喜愛的商店"><br>
         <b>顯示使用者喜愛的商店</b>
       </td>
     </tr>
   </table>
+</div>
+
+## 大致功能展示
+<div align="center">
+    <td align="center" style="padding: 0 20px;">
+        <img src="Docs/Compelet1.gif" width="200" alt="大致的功能"><br>
+    </td>
 </div>
 
 ## 授權
