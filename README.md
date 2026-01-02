@@ -1,4 +1,12 @@
+<p align="right">
+  <a href="README.en.md">EN</a> |
+  <a href="README.md">繁體中文</a> |
+  <a href="README.ja.md">JP</a> |
+  <a href="README.ko.md">KR</a>
+</p>
+
 ## 專案說明
+
 本專案為 SwiftUI 開發的 iOS App，
 用於讀取並解析政府開放資料集「綠生活_綠色商店」JSON 檔案，
 並將台中市的綠色商店以地圖標記（Map Annotation）方式顯示其所在位置。
