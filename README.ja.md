@@ -5,6 +5,15 @@
   <a href="README.ko.md">KR</a>
 </p>
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Swift-5.9-orange">
+  <img src="https://img.shields.io/badge/SwiftUI-iOS-blue">
+  <img src="https://img.shields.io/badge/iOS-17+-lightgrey">
+  <img src="https://img.shields.io/badge/MapKit-Apple-green">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-teal">
+  <img src="https://img.shields.io/badge/Status-Demo-success">
+</p>
+
 ## プロジェクト説明
 
 本プロジェクトは SwiftUI を用いて開発された iOS アプリです。
