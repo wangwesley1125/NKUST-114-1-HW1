@@ -1,3 +1,7 @@
+# 🗺️ 타이중시 그린 스토어 지도 시스템 (Green Store Map App)
+
+> 학급: 사자삼병 ｜ 이름: 왕요위 ｜ 학번: C112152315
+
 <p align="right">
   <a href="README.md">繁體中文</a> |
   <a href="README.en.md">EN</a> |
