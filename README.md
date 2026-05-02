@@ -1,7 +1,5 @@
 # 🗺️台中市綠色商店地圖系統
 
-> 班級：四子三丙 ｜ 姓名：王耀偉 ｜ 學號：C112152315
-
 <p align="right">
   <a href="README.md">繁體中文</a> |
   <a href="README.en.md">EN</a> |
