@@ -1,7 +1,5 @@
 # 🗺️ Taichung Green Store Map System (Green Store Map App)
 
-> Class: Department of Electronic Engineering, Year 3, Class C ｜ Name: Wang Yao-Wei ｜ Student ID: C112152315
-
 <p align="right">
   <a href="README.md">繁體中文</a> |
   <a href="README.en.md">EN</a> |
