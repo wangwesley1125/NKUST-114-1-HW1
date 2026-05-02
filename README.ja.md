@@ -1,7 +1,5 @@
 # 🗺️ 台中市グリーンストア地図システム（Green Store Map App）
 
-> クラス：四子三丙 ｜ 氏名：しょうい ｜ 学籍番号：C112152315
-
 <p align="right">
   <a href="README.md">繁體中文</a> |
   <a href="README.en.md">EN</a> |
